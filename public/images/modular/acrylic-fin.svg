@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 260" width="100%" height="100%">
+  <defs>
+    <linearGradient id="acrylic-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="15%" stop-color="#e8f3f8" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2" />
+      <stop offset="85%" stop-color="#d4e8f0" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.95" />
+    </linearGradient>
+    <filter id="glass-shadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Clear Acrylic Blade -->
+  <g filter="url(#glass-shadow)">
+    <rect x="35" y="30" width="90" height="200" rx="3" fill="url(#acrylic-grad)" stroke="#9ab8c7" stroke-width="1.2" />
+    <!-- Beveled highlight edge -->
+    <line x1="37" y1="32" x2="37" y2="228" stroke="#ffffff" stroke-width="2" />
+    <line x1="123" y1="32" x2="123" y2="228" stroke="#7e9aa8" stroke-width="1" />
+    
+    <!-- Polished Chamfer Light Caustic Lines -->
+    <line x1="50" y1="35" x2="50" y2="225" stroke="#ffffff" stroke-width="1" opacity="0.7" />
+    <line x1="108" y1="35" x2="108" y2="225" stroke="#ffffff" stroke-width="0.8" opacity="0.5" />
+
+    <!-- Top Connection Clamp (Stainless Steel M12) -->
+    <rect x="25" y="45" width="110" height="36" rx="2" fill="#c4beba" stroke="#524d49" stroke-width="1.2" />
+    <!-- Clamp Screws -->
+    <circle cx="50" cy="63" r="7" fill="#88817a" stroke="#2b2826" stroke-width="1" />
+    <circle cx="50" cy="63" r="3.5" fill="#f0ece6" />
+    <circle cx="110" cy="63" r="7" fill="#88817a" stroke="#2b2826" stroke-width="1" />
+    <circle cx="110" cy="63" r="3.5" fill="#f0ece6" />
+
+    <!-- Center alignment locator -->
+    <circle cx="80" cy="140" r="2" fill="#111" opacity="0.4" />
+    <line x1="74" y1="140" x2="86" y2="140" stroke="#111" stroke-width="0.6" opacity="0.4" />
+    <line x1="80" y1="134" x2="80" y2="146" stroke="#111" stroke-width="0.6" opacity="0.4" />
+  </g>
+
+  <text x="80" y="248" font-family="monospace" font-size="9" fill="#222" text-anchor="middle" letter-spacing="1">PMMA-CL / 35MM FIN</text>
+</svg>

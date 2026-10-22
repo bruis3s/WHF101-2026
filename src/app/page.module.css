@@ -1,0 +1,213 @@
+/* ── Homepage Styles ── */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--margin) * 2);
+  padding: 0;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logoDot {
+  font-size: var(--font-size-desktop);
+}
+
+/* ── Fixed Menu Wrapper (T:0 R:0) ── */
+.menuFixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* ── Single Horizontal Stack (matches Framer 'Horizontal' component) ── */
+.menuContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 2px;
+  pointer-events: auto;
+  white-space: nowrap;
+}
+
+/* ── Nav Item Wrapper ── */
+.navItemWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ── Unified menu item style (Close/Menu button AND nav links) ── */
+.menuItem {
+  background: var(--color-white);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.menuItem:hover {
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+}
+
+.menuArrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.55em;
+  line-height: 1;
+}
+
+/* ── Spacer ── */
+.spacer {
+  flex: 1;
+}
+
+/* ── Bottom Info Section ── */
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Group 1 (Left Group - 45% width, space-between) */
+.group1 {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--color-white);
+  padding: 4px 0;
+}
+
+/* Group 2 (Right Group - 45% width, space-between) */
+.group2 {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--color-white);
+  padding: 4px 0;
+}
+
+.label {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.groupContent {
+  width: 55%;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+}
+
+.entryRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+}
+
+.prefix {
+  flex-shrink: 0;
+  width: 1.5ch;
+  text-align: left;
+}
+
+.entryValue {
+  line-height: var(--line-height);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.entryValue:hover {
+  text-decoration: underline;
+}
+
+.contactSection {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .logo {
+    font-size: var(--font-size-mobile);
+  }
+
+  .logoDot {
+    font-size: var(--font-size-mobile);
+  }
+
+  .menuItem {
+    font-size: var(--font-size-mobile);
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 2.5em;
+  }
+
+  .group1,
+  .group2 {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.75em;
+  }
+
+  .label,
+  .groupContent {
+    font-size: var(--font-size-mobile);
+  }
+}

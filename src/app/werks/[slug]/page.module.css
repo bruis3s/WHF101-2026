@@ -1,0 +1,228 @@
+/* ── Case Study Page Styles ── */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--margin) * 2);
+  padding: 0;
+  position: relative;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logoDot {
+  font-size: var(--font-size-desktop);
+}
+
+/* ── Navigation / Back Bar ── */
+.navBar {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.backButton {
+  background: var(--color-white);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.55em;
+  line-height: 1;
+}
+
+/* ── Project Header Info ── */
+.projectHeader {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 21% 12% minmax(0, 50%) 1fr;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.col1 {
+  grid-column: 1;
+}
+
+.col2 {
+  grid-column: 2;
+}
+
+.col3 {
+  grid-column: 3;
+}
+
+.projectTitle {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  padding: 4px 0;
+  display: inline-block;
+}
+
+.projectCode {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  padding: 4px 0;
+  display: inline-block;
+}
+
+.description {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: 1.25;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  padding: 4px 0;
+}
+
+/* ── Specs / Metadata Grid ── */
+.metaGrid {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 21% 12% minmax(0, 50%) 1fr;
+  width: 100%;
+}
+
+.specList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--color-white);
+  padding: 4px 0;
+}
+
+.specRow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.specKey {
+  width: 120px;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.specValue {
+  flex: 1;
+}
+
+/* ── Gallery / Visual Content ── */
+.gallery {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.imageRow {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.imageCard {
+  background-color: var(--color-white);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.caption {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  opacity: 0.7;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .projectHeader,
+  .metaGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo,
+  .logoDot,
+  .backButton,
+  .projectTitle,
+  .projectCode,
+  .description,
+  .specKey,
+  .specValue,
+  .caption {
+    font-size: var(--font-size-mobile);
+  }
+
+  .imageRow {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,106 @@
+/* ── Design System ── */
+/* Font: Helvetica Neue Medium, 19.2px desktop / 16px mobile */
+/* Letter spacing: 0.03em, Line height: 100%, Color: #121212 */
+/* Margin: T,B,R,L: 10px */
+/* Colors: White #FFF, Black #000 */
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeue-Medium.woff2') format('woff2'),
+       local('Helvetica Neue Medium'), local('HelveticaNeue-Medium');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeue-Bold.woff2') format('woff2'),
+       local('Helvetica Neue Bold'), local('HelveticaNeue-Bold');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+  src: url('/fonts/HelveticaNeue-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Medium';
+  src: url('/fonts/HelveticaNeue-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-primary: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  --font-size-desktop: 19.2px;
+  --font-size-mobile: 16px;
+  --letter-spacing: 0.03em;
+  --line-height: 100%;
+  --color-text: #121212;
+  --color-white: #FFF;
+  --color-black: #000;
+  --margin: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 100%;
+}
+
+html {
+  background-color: var(--color-white);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-white);
+  color: var(--color-text);
+  overflow-x: clip;
+  position: relative;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  padding: var(--margin);
+}
+
+/* Texture wrapper — fills body minus padding, creating white 10px border */
+.texture-wrapper {
+  min-height: calc(100vh - var(--margin) * 2);
+  background-image: url('/texture.png');
+  background-repeat: repeat;
+  background-size: 43px 43px;
+  background-attachment: fixed;
+  background-position: var(--margin) var(--margin);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: var(--font-size-mobile);
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}

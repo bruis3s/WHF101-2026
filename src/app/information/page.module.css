@@ -1,0 +1,231 @@
+/* ── Information Page Styles (Strict match to Information page-export.html) ── */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--margin) * 2);
+  padding: 0 0 20px 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* 3-Column Grid matching export:
+   Col 1: 138px (labels: about studio, people, studio)
+   gap: 120px
+   Col 2: 108px (labels: services, contact)
+   gap: 120px
+   Col 3: 1fr (content)
+*/
+.gridRow {
+  display: grid;
+  grid-template-columns: 138px 108px minmax(0, 1fr);
+  column-gap: 120px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.col1 {
+  grid-column: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.col2 {
+  grid-column: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.col3 {
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Spacings between rows */
+.servicesRow {
+  margin-top: 60px; /* 60px gap from paragraph to services list */
+}
+
+.sectionRow {
+  margin-top: 68px; /* 68px gap between main sections */
+}
+
+/* ── White Block Background on each text ── */
+.whiteBlock {
+  background-color: var(--color-white);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  padding: 2px 6px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+/* Paragraph with solid white block background */
+.paragraphBlock {
+  background-color: var(--color-white);
+  padding: 4px 8px;
+  max-width: 672px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.paragraphText {
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Services list */
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* People with solid white block background */
+.peopleBlock {
+  background-color: var(--color-white);
+  padding: 4px 8px;
+  max-width: 403px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.peopleText {
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: 19px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Spacer pushing contact to bottom */
+.spacer {
+  flex: 1 1 auto;
+  min-height: 120px;
+}
+
+/* Bottom Section */
+.bottomSection {
+  width: 100%;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contactEntry {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-white);
+  padding: 2px 6px;
+  width: fit-content;
+  box-sizing: border-box;
+}
+
+.prefix {
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  white-space: nowrap;
+}
+
+.link {
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+/* ── Mobile Layout (@media (max-width: 809.98px)) ── */
+@media (max-width: 809.98px) {
+  .page {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  .gridRow {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .col1,
+  .col2 {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .col3 {
+    width: 100%;
+  }
+
+  .servicesRow {
+    margin-top: 36px;
+  }
+
+  .sectionRow {
+    margin-top: 36px;
+  }
+
+  .whiteBlock,
+  .prefix,
+  .link {
+    font-size: var(--font-size-mobile);
+  }
+
+  .paragraphBlock,
+  .peopleBlock {
+    max-width: 100%;
+  }
+
+  .paragraphText,
+  .peopleText {
+    font-size: var(--font-size-mobile);
+    line-height: 1.25;
+  }
+
+  .spacer {
+    min-height: 60px;
+  }
+}

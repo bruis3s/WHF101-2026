@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="metal-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0ece6" />
+      <stop offset="35%" stop-color="#dad5cd" />
+      <stop offset="70%" stop-color="#c5bfb6" />
+      <stop offset="100%" stop-color="#a8a299" />
+    </linearGradient>
+    <filter id="subtle-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-opacity="0.18" flood-color="#000" />
+    </filter>
+  </defs>
+
+  <g filter="url(#subtle-shadow)">
+    <!-- Curved Perforated Plate -->
+    <path d="M 20,40 Q 160,-10 300,40 L 290,130 Q 160,80 30,130 Z" fill="url(#metal-grad)" stroke="#8d877e" stroke-width="1.2" />
+    <!-- Outer chamfer rim -->
+    <path d="M 20,40 Q 160,-10 300,40" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.8" />
+    <path d="M 30,130 Q 160,80 290,130" fill="none" stroke="#4a4640" stroke-width="1" opacity="0.6" />
+
+    <!-- Perforated matrix pattern dots -->
+    <g fill="#4a4640" opacity="0.75">
+      <!-- Row 1 -->
+      <circle cx="60" cy="55" r="3" /><circle cx="90" cy="50" r="3" /><circle cx="120" cy="46" r="3" />
+      <circle cx="150" cy="44" r="3" /><circle cx="180" cy="44" r="3" /><circle cx="210" cy="46" r="3" />
+      <circle cx="240" cy="50" r="3" /><circle cx="270" cy="56" r="3" />
+
+      <!-- Row 2 -->
+      <circle cx="65" cy="75" r="3.2" /><circle cx="95" cy="70" r="3.2" /><circle cx="125" cy="66" r="3.2" />
+      <circle cx="155" cy="64" r="3.2" /><circle cx="185" cy="64" r="3.2" /><circle cx="215" cy="66" r="3.2" />
+      <circle cx="245" cy="70" r="3.2" /><circle cx="265" cy="76" r="3.2" />
+
+      <!-- Row 3 -->
+      <circle cx="70" cy="95" r="3.2" /><circle cx="100" cy="90" r="3.2" /><circle cx="130" cy="86" r="3.2" />
+      <circle cx="160" cy="84" r="3.2" /><circle cx="190" cy="84" r="3.2" /><circle cx="220" cy="86" r="3.2" />
+      <circle cx="250" cy="91" r="3.2" />
+
+      <!-- Row 4 -->
+      <circle cx="80" cy="115" r="3" /><circle cx="110" cy="108" r="3" /><circle cx="140" cy="104" r="3" />
+      <circle cx="170" cy="102" r="3" /><circle cx="200" cy="102" r="3" /><circle cx="230" cy="106" r="3" />
+    </g>
+
+    <!-- Side connection tabs -->
+    <rect x="18" y="55" width="4" height="60" rx="1.5" fill="#333333" />
+    <rect x="296" y="55" width="4" height="60" rx="1.5" fill="#333333" />
+    <circle cx="20" cy="70" r="2" fill="#fff" />
+    <circle cx="20" cy="100" r="2" fill="#fff" />
+    <circle cx="298" cy="70" r="2" fill="#fff" />
+    <circle cx="298" cy="100" r="2" fill="#fff" />
+  </g>
+
+  <!-- Technical label -->
+  <text x="160" y="165" font-family="monospace" font-size="9" fill="#111" text-anchor="middle" letter-spacing="1">MOD-ARC-30° / 6061-T6 ALUM</text>
+</svg>

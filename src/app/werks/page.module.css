@@ -1,0 +1,419 @@
+/* ── Werks Page Styles (Strict Design System from worksgrid) ── */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--margin) * 2);
+  padding: 0;
+  position: relative;
+  width: 100%;
+  background: transparent;
+}
+
+
+/* ── Editorial Works Rows Layout (From worksgrid) ── */
+.worksContainer {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 0 90px 0; /* Only bottom padding for fixed switcher */
+}
+
+.workRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 0 42.5px 0; /* Zero top, left, right padding */
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Row variations */
+.workRowSingle {
+  justify-content: flex-start;
+}
+
+.workRowEnd {
+  justify-content: flex-end;
+}
+
+/* ── Work Card ── */
+.cardLink {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--color-text);
+  position: relative;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.cardImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.placeholderBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-text);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-desktop);
+  color: var(--color-text);
+}
+
+/* ── Caption Overlay (Slide-in from Left on Hover) ── */
+.captionOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.captionLine {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 0 4px;
+  height: 19.2px;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.captionTitle {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.captionMeta {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  opacity: 0.65;
+  white-space: nowrap;
+}
+
+/* ── Fixed Floating Bottom View Switcher (Grid | List | Explore) ── */
+.bottomBar {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  padding: 0;
+  z-index: 100;
+}
+
+.switcherButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  text-decoration: none;
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: opacity 0.15s ease;
+}
+
+.switcherButton:hover {
+  opacity: 1;
+}
+
+.switcherButton:hover .radioCircle {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.radioCircle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #dedede;
+  box-sizing: border-box;
+  display: inline-block;
+  flex-shrink: 0;
+  background-color: transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.radioCircleActive {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+/* ── Architectural List View (From haf.framer.website-export.html) ── */
+.listPage {
+  width: calc(100% + var(--margin) * 2);
+  margin-left: calc(-1 * var(--margin));
+  margin-right: calc(-1 * var(--margin));
+  min-height: calc(100vh - var(--margin) * 2);
+  background-color: var(--color-white);
+  position: relative;
+  padding: 0 0 90px 0;
+  box-sizing: border-box;
+}
+
+.listView {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--color-white);
+}
+
+.listHeader {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  width: 100%;
+  background-color: var(--color-white);
+  padding: 44px 10px 10px 10px;
+  border-bottom: 2px solid var(--color-text);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.headerButton {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.colId {
+  width: 10%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.colTitle {
+  width: 30%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.colType {
+  width: 20%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.colLocation {
+  width: 30%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.colYear {
+  flex: 1 1 0;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.sortIconWrapper {
+  width: 13px;
+  height: 10px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sortArrow {
+  width: 11px;
+  height: 8.5px;
+  color: #dedede;
+  transition: transform 0.2s ease, color 0.15s ease;
+}
+
+.sortArrowActive {
+  color: var(--color-text);
+}
+
+.sortSpacer {
+  width: 13px;
+  height: 10px;
+  flex-shrink: 0;
+}
+
+.listRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 7px 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.cellBox {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 0;
+  height: 19.2px;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.cellBox span {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: var(--font-size-desktop);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  color: rgba(18, 18, 18, 0.5); /* text-[#12121280] from Framer export */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.15s ease;
+}
+
+.listRow:hover .cellBox span {
+  color: var(--color-text); /* Highlight to solid black on hover */
+}
+
+/* ── Mobile Layout (@media (max-width: 809.98px)) ── */
+@media (max-width: 809.98px) {
+  .logo,
+  .logoDot,
+  .captionTitle,
+  .captionMeta,
+  .switcherButton,
+  .listHeader,
+  .listRow {
+    font-size: var(--font-size-mobile);
+  }
+
+  .captionLine {
+    height: 16px;
+  }
+
+  .worksContainer {
+    margin-top: 0;
+    padding: 0 0 80px 0;
+  }
+
+  .workRow {
+    flex-direction: column !important;
+    gap: 36px !important;
+    padding: 0 0 36px 0 !important;
+    width: 100% !important;
+  }
+
+  .cardLink {
+    width: 100% !important;
+  }
+
+  /* On mobile, caption is pinned visible without requiring hover */
+  .captionOverlay {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .listView {
+    min-width: 0;
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .listHeader {
+    display: none;
+  }
+
+  .listRow {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 4px;
+    background-color: var(--color-white);
+  }
+
+  .colId,
+  .colTitle,
+  .colType,
+  .colLocation,
+  .colYear {
+    width: 100%;
+  }
+
+  .cellBox span {
+    font-size: var(--font-size-mobile);
+  }
+
+  .bottomBar {
+    bottom: 10px;
+    padding: 0;
+    gap: 10px;
+  }
+
+  .switcherButton {
+    font-size: var(--font-size-mobile);
+    padding: 2px;
+    gap: 5px;
+  }
+}
